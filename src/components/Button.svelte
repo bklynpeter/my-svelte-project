@@ -1,12 +1,8 @@
 <script>
-  export let style = 'primary';
-  export let type = 'button';
-  export let disabled = false;
+  export let style = 'primary'
+  export let type = 'button'
+  export let disabled = false
 </script>
-
-<button {type} {disabled} {style}>
-  <slot></slot>
-</button>
 
 <style>
   button {
@@ -17,13 +13,6 @@
     width: 100px;
     height: 40px;
     cursor: pointer;
-  }
-  .primary {
-    background-color: #202142;
-  }
-
-  .secondary {
-    background: #ff6a95;
   }
 
   button:hover {
@@ -37,9 +26,12 @@
     cursor: auto;
   }
 
-  button:disabled:hover{
+  button:disabled:hover {
     transform: scale(1);
     opacity: 1;
   }
-
 </style>
+
+<button {type} {disabled} {style}>
+  <slot />
+</button>
