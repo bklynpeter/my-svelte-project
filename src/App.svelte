@@ -21,7 +21,10 @@
 	];
 
 	$: count = feedback.length;
-	$: average = feedback.reduce((a, {rating}) => a + rating, 0)/count;
+
+	$: average = (feedback.reduce((a, {rating}) => a + rating, 0)/count).toFixed(1);
+	// $: shortAverage = average.toFixed(1)
+
 	const deleteFeedback = (e) => {
 		const itemId = e.detail;
 		feedback = feedback.filter((item) => item.id !== itemId);

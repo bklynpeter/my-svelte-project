@@ -1,6 +1,7 @@
 <script>
   export let count;
   export let average;
+  // export let shortAverage;
 </script>
 
 <div class="feedback-stats">
